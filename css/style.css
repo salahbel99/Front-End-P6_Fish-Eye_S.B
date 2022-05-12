@@ -1,0 +1,257 @@
+:root {
+    --first-color: #911C1C;
+    --secondary-color: #D44507;
+    --third-color: #757575;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MS', serif, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 90%; 
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.content {
+    list-style-type: none;
+    display: inline-block;
+    padding: 3px;
+    font-size: 20px;
+    border: 2px solid  #D44507;
+    border-radius: 50px;
+    margin-right: 10px; 
+ }
+
+.content:hover{
+  color: white;
+  background-color: #D44507;
+}
+
+.content a:hover{
+  color: white;
+}
+
+@media (min-width: 768px) { 
+  .content{
+    color: red;
+  }
+}
+
+/*** LOGO ***/
+
+.logoEye img{
+    width: 200px;
+    height: 50px; 
+    margin-left: 100px;
+    margin: 0;
+}
+
+h1, h2{
+    color: #901C1C;
+    margin-right: 100px;
+    margin: 0;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.photographer_section {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 70px;
+    margin-top: 100px;
+}
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photographer_section article h2 {
+    color: #D3573C;
+    font-size: 20px;
+}
+
+.photographer_section article img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.flexphotographe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0;
+  
+}
+
+.flexphotographe .profilphotographe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30.33%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 15px 0;
+  margin: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.flexphotographe .profilphotographe a {
+  text-decoration: none;
+}
+
+.flexphotographe .profilphotographe a .nomphotographe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexphotographe .profilphotographe a .nomphotographe img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.flexphotographe .profilphotographe a .nomphotographe h2 {
+  font-size: 36px;
+  color: #d3573ccc;
+  margin-bottom: 8px;
+}
+
+.flexphotographe .profilphotographe .descriptionphotographe h3 {
+  font-size: 14px;
+  color: #901c1c;
+  margin: 0;
+}
+
+.flexphotographe .profilphotographe .descriptionphotographe p {
+  font-size: 12px;
+  margin: 0;
+  margin: 5px;
+}
+
+.flexphotographe .profilphotographe .descriptionphotographe span {
+  color: #c4c4c4;
+  font-size: 12px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.flexphotographe .profilphotographe ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+  margin: 8px;
+}
+
+.flexphotographe .profilphotographe ul li {
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 3px;
+  list-style-type: none;
+  text-align: center;
+  font-size: 14px;
+  height: 18px;
+  border-radius: 11px;
+  border: 1.5px solid #c4c4c4;
+  color: #901c1c;
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header .logofisheye img {
+    margin: 0;
+  }
+  header .nav_menu ul {
+    padding: 0;
+  }
+  header .nav_menu ul li {
+    margin: 3px 0;
+  }
+  header .titrephoto {
+    font-size: 25px;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .flexphotographe .profilphotographe {
+    width: 100%;
+  }
+}
+
+/*.photographer_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photographer_section article h2 {
+    color: #D3573C;
+    font-size: 36px;
+}
+
+.photographer_section article img {
+    height: 200px;
+    width: 200px;
+} */ 
