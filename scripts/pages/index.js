@@ -1,30 +1,33 @@
-    async function getPhotographers() {
-        // Penser à remplacer par les données récupérées dans le json
+   async function getPhotographers() {
+        // replace with the data retrieved in the json
         return fetch('/data/photographers.json')
-        .then(response => response.json().then(dataPhotographers => dataPhotographers.photographers))
+        .then(response => response.json()
+        .then(dataPhotographers => dataPhotographers.photographers))
 
       .catch(err => {
         throw new Error('La requete api getPhotographers a échoué : ', err)
       })
   }
 
-        // et bien retourner le tableau photographers seulement une foiss
+        // Display once the photographers' cards in homepage 
     async function displayData(photographers) {
+
         const photographersSection = document.querySelector("#photographer_section");
 
         photographers.forEach((photographer) => {
             const photographerModel = photographerFactory(photographer);
             const userCardDOM = photographerModel.getUserCardDOM();
-            photographersSection.appendChild(userCardDOM);
+            photographersSection.appendChild(userCardDOM); 
+            
         });
     };
 
     async function init() {
-        // Récupère les datas des photographes
+        // Retrieves data from photographers
         const photographers = await getPhotographers();
-        console.log(photographers);
         displayData(photographers);
     };
     
-    init();
+  init()  
+  
     
